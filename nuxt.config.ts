@@ -8,5 +8,6 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss() as any],
   },
+
   modules: ["@nuxt/fonts", "@nuxt/icon", "@nuxt/image"],
 });

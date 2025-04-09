@@ -19,7 +19,7 @@ const closeMenu = () => {
     <img
       v-if="!isOpen"
       @click="openMenu"
-      src="~/assets/open.png"
+      src="/open.png"
       alt="open menu icon"
       width="20"
       height="20"
@@ -27,7 +27,7 @@ const closeMenu = () => {
     <img
       v-else
       @click="closeMenu"
-      src="~/assets/close.png"
+      src="/close.png"
       alt="close menu icon"
       width="20"
       height="20"
@@ -36,14 +36,17 @@ const closeMenu = () => {
       v-if="isOpen"
       class="absolute top-24 left-0 bg-red-500 text-white h-[calc(100vh-6rem)] flex flex-col justify-center gap-8 items-center w-full text-3xl z-10"
     >
-      <li v-for="link in links" :key="link.id">
+      <li v-for="link in links" :key="link.id" @click="closeMenu">
         <NuxtLink :to="link.url">{{ link.title }}</NuxtLink>
       </li>
-      <li v-if="isAuthenticated">
+      <li v-if="isAuthenticated" @click="closeMenu">
         <NuxtLink to="/orders">Orders</NuxtLink>
       </li>
-      <li v-else>
+      <li v-else @click="closeMenu">
         <NuxtLink to="/login">Login</NuxtLink>
+      </li>
+      <li @click="closeMenu">
+        <CartIcon />
       </li>
     </ul>
   </div>
