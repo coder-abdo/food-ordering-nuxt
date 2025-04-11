@@ -1,3 +1,7 @@
 <template>
-  <h1>home page</h1>
+  <main class="overflow-x-hidden">
+    <Slider />
+    <Featured />
+    <Offer />
+  </main>
 </template>

@@ -1,3 +1,44 @@
 <template>
-  <h1>orders page</h1>
+  <main class="p-4 lg:px-20 xl:px-40">
+    <table class="w-full border-separate border-spacing-3">
+      <thead>
+        <tr class="text-left">
+          <th class="hidden md:block">Order ID</th>
+          <th>Date</th>
+          <th>Price</th>
+          <th class="hidden md:block">Products</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-sm md:text-base bg-red-50">
+          <td class="hidden md:block py-6 px-1">1237861238721</td>
+          <td class="py-6 px-1">19.07.2023</td>
+          <td class="py-6 px-1">89.90</td>
+          <td class="hidden md:block py-6 px-1">
+            Big Burger Menu (2), Veggie Pizza (2), Coca Cola 1L (2)
+          </td>
+          <td class="py-6 px-1">On the way (approx. 10min)...</td>
+        </tr>
+        <tr class="text-sm md:text-base odd:bg-gray-100">
+          <td class="hidden md:block py-6 px-1">1237861238721</td>
+          <td class="py-6 px-1">19.07.2023</td>
+          <td class="py-6 px-1">89.90</td>
+          <td class="hidden md:block py-6 px-1">
+            Big Burger Menu (2), Veggie Pizza (2), Coca Cola 1L (2)
+          </td>
+          <td class="py-6 px-1">On the way (approx. 10min)...</td>
+        </tr>
+        <tr class="text-sm md:text-base odd:bg-gray-100">
+          <td class="hidden md:block py-6 px-1">1237861238721</td>
+          <td class="py-6 px-1">19.07.2023</td>
+          <td class="py-6 px-1">89.90</td>
+          <td class="hidden md:block py-6 px-1">
+            Big Burger Menu (2), Veggie Pizza (2), Coca Cola 1L (2)
+          </td>
+          <td class="py-6 px-1">On the way (approx. 10min)...</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
 </template>
