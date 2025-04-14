@@ -1,6 +1,16 @@
+<script setup lang="ts">
+import type { OrderType } from "~/types";
+const { status } = useAuth();
+const isAuthenticated = computed(() => status.value === "authenticated");
+const { data: orders } = await useFetch<OrderType[]>("/api/orders");
+if (!isAuthenticated.value) navigateTo("/");
+</script>
 <template>
   <main class="p-4 lg:px-20 xl:px-40">
-    <table class="w-full border-separate border-spacing-3">
+    <table
+      v-if="orders?.length! > 0"
+      class="w-full border-separate border-spacing-3"
+    >
       <thead>
         <tr class="text-left">
           <th class="hidden md:block">Order ID</th>
@@ -40,5 +50,12 @@
         </tr>
       </tbody>
     </table>
+    <div
+      v-else
+      class="w-full h-[60vh] flex flex-col justify-center items-center"
+    >
+      <h1 class="text-3xl font-bold">No orders found</h1>
+      <p class="text-sm md:text-base">You have no orders yet.</p>
+    </div>
   </main>
 </template>

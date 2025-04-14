@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import { menu } from "~/data";
+import type { Menu } from "~/types";
+
+const { data: menu } = await useFetch<Menu>("/api/categories");
 </script>
 
 <template>

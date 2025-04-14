@@ -1,3 +1,9 @@
+<script setup lang="ts">
+definePageMeta({
+  auth: { unauthenticatedOnly: true, navigateAuthenticatedTo: "/" },
+});
+const { signIn } = useAuth();
+</script>
 <template>
   <main class="p-4 flex items-center justify-center">
     <section
@@ -11,7 +17,10 @@
       >
         <h1 class="font-bold text-xl xl:text-3xl">Welcome</h1>
         <p>Log into your account or create a new one using social buttons</p>
-        <button class="flex gap-4 p-4 ring-1 ring-orange-100 rounded-md">
+        <button
+          class="flex gap-4 p-4 ring-1 ring-orange-100 rounded-md cursor-pointer"
+          @click="signIn('google')"
+        >
           <img
             src="/google.png"
             alt=""

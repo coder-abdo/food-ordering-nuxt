@@ -8,6 +8,9 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss() as any],
   },
-
-  modules: ["@nuxt/fonts", "@nuxt/icon", "@nuxt/image"],
+  modules: ["@nuxt/fonts", "@nuxt/icon", "@sidebase/nuxt-auth"],
+  auth: {
+    globalAppMiddleware: true,
+    baseURL: `http://localhost:${process.env.PORT || 3000}/api/auth/`,
+  },
 });

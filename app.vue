@@ -2,7 +2,9 @@
   <div>
     <!-- <NuxtRouteAnnouncer /> -->
     <Notifications />
-    <Navbar />
+    <ClientOnly>
+      <Navbar />
+    </ClientOnly>
     <NuxtPage />
     <Footer />
   </div>
