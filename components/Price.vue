@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-4">
-    <h2 class="text-2xl font-bold">${{ total.toFixed(2) }}</h2>
+    <h2 class="text-2xl font-bold">${{ total }}</h2>
 
     <!-- OPTIONS CONTAINER -->
     <div class="flex gap-4">
@@ -44,8 +44,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, watch } from "vue";
-
+import { defineProps } from "vue";
 type Option = {
   title: string;
   additionalPrice: number;
@@ -53,7 +52,7 @@ type Option = {
 
 type Props = {
   price: number;
-  id: number;
+  id: string;
   options?: Option[];
 };
 

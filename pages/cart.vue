@@ -1,3 +1,4 @@
+<script setup lang="ts"></script>
 <template>
   <main class="flex flex-col text-red-500 lg:flex-row gap-4">
     <div

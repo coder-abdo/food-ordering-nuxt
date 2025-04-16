@@ -24,4 +24,12 @@ type OrderType = {
   status: string;
   intent_id?: string;
 };
-export type { Menu, CartItemType, OrderType };
+type ProductType = {
+  id: string;
+  title: string;
+  description?: string;
+  img?: string;
+  price: number;
+  options?: { title: string; additionalPrice: number }[];
+};
+export type { Menu, CartItemType, OrderType, ProductType };

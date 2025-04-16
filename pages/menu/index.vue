@@ -1,11 +1,22 @@
 <script setup lang="ts">
 import type { Menu } from "~/types";
 
-const { data: menu } = await useFetch<Menu>("/api/categories");
+const { data: menu, status, error } = await useFetch<Menu>("/api/categories");
 </script>
 
 <template>
+  <main v-if="status === 'pending'">
+    <span
+      class="iconify"
+      data-icon="svg-spinners:180-ring"
+      data-inline="false"
+    />
+  </main>
+  <main v-if="error">
+    <p class="text-red-500 capitalize">{{ error?.message }}</p>
+  </main>
   <main
+    v-if="menu && menu.length > 0"
     class="p-4 lg:px-20 xl:px-40 h-[calc(100vh-6rem)] md:h-[calc(100vh-9rem)] flex flex-col md:flex-row items-center"
   >
     <NuxtLink
@@ -28,5 +39,8 @@ const { data: menu } = await useFetch<Menu>("/api/categories");
         </button>
       </div>
     </NuxtLink>
+  </main>
+  <main v-else class="flex justify-center items-center h-screen">
+    <p class="text-2xl capitalize font-bold">there is no categories yet</p>
   </main>
 </template>
