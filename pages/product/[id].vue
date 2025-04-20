@@ -7,7 +7,9 @@ const {
   data: singleProduct,
   error,
   status,
-} = await useFetch<ProductType>(`/api/products/${id}`);
+} = await useFetch<ProductType>(`/api/products/${id}`, {
+  lazy: true,
+});
 </script>
 <template>
   <main v-if="status === 'pending'">

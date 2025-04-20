@@ -8,9 +8,18 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss() as any],
   },
-  modules: ["@nuxt/fonts", "@nuxt/icon", "@sidebase/nuxt-auth"],
+  modules: [
+    "@nuxt/fonts",
+    "@nuxt/icon",
+    "@sidebase/nuxt-auth",
+    "@pinia/nuxt",
+    "pinia-plugin-persistedstate/nuxt",
+  ],
   auth: {
     globalAppMiddleware: true,
     baseURL: `http://localhost:${process.env.PORT || 3000}/api/auth/`,
+  },
+  pinia: {
+    storesDirs: ["./stores/**"],
   },
 });

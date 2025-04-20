@@ -32,4 +32,10 @@ type ProductType = {
   price: number;
   options?: { title: string; additionalPrice: number }[];
 };
-export type { Menu, CartItemType, OrderType, ProductType };
+
+type cartType = {
+  products: CartItemType[];
+  totalPrice: number;
+  totalItems: number;
+};
+export type { Menu, CartItemType, OrderType, ProductType, cartType };
