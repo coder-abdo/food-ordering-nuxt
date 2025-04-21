@@ -1,6 +1,10 @@
-# Nuxt Minimal Starter
+# Massimo Bianchi
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is a full stack food ordering app built with Nuxt 3.
+I used authentication and authorization with Nuxt-Auth and Stripe for payments.
+I used Prisma for the database and Postgres for the database.
+I used Tailwind CSS for the styling.
+I used Typescript for the typing saftey.
 
 ## Setup
 
@@ -72,4 +76,30 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+### Techs I used:
+
+1- Nuxt 3.
+2- Tailwind CSS.
+3- Typescript.
+4- Stripe.
+5- Nuxt-Auth.
+6- Prisma.
+7- Postgres.
+
+### for the database I used docker compose so you can run the following command:
+
+1- to run the database
+
+```bash
+docker compose --env-file ./.env up
+```
+
+2- to stop the database
+
+```bash
+docker compose down
+```
+
+You can find the environment variables examples in the .env.example file.
+
+the code from the youtube channel is here: nel is here: URL_ADDRESS.youtunel is here: [youtube](https://www.youtube.com/watch?v=aYzT06aQkGI&t=6192s&ab_channel=LamaDev)

@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     "@sidebase/nuxt-auth",
     "@pinia/nuxt",
     "pinia-plugin-persistedstate/nuxt",
+    "@unlok-co/nuxt-stripe",
   ],
   auth: {
     globalAppMiddleware: true,
@@ -21,5 +22,13 @@ export default defineNuxtConfig({
   },
   pinia: {
     storesDirs: ["./stores/**"],
+  },
+  stripe: {
+    server: {
+      key: process.env.STRIPE_SECRET_KEY,
+    },
+    client: {
+      key: process.env.STRIPE_PUBLIC_KEY,
+    },
   },
 });
