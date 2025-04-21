@@ -102,4 +102,5 @@ docker compose down
 
 You can find the environment variables examples in the .env.example file.
 
-the code from the youtube channel is here: nel is here: URL_ADDRESS.youtunel is here: [youtube](https://www.youtube.com/watch?v=aYzT06aQkGI&t=6192s&ab_channel=LamaDev)
+code is inspired from the youtube channel is here: [youtube](https://www.youtube.com/watch?v=aYzT06aQkGI&t=6192s&ab_channel=LamaDev)
+he used `next js` while i used `nuxt`.
