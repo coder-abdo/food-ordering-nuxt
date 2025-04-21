@@ -1,4 +1,7 @@
 <script setup lang="ts">
+definePageMeta({
+  ssr: false,
+});
 const { stripe } = useClientStripe();
 const router = useRouter();
 watch(
